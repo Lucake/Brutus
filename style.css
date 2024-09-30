@@ -1,0 +1,61 @@
+.menu {
+    --width: 40%;
+    --max-width: 450px;
+    width: var(--width);
+    max-width: var(--max-width);
+    height: 100%;
+    overflow-y: scroll;
+    border-color: inherit;
+    position: sticky;
+    top: 3.08rem;
+    left: 0;
+}
+
+#sideMenu {
+    width: 100%;
+    border: 0;
+    border-bottom:2px solid;
+    height:100%;
+}
+
+main {
+    width: -webkit-fill-available;
+}
+
+.content {
+    display: flex;
+    padding-top:2.9rem;
+    margin-top:-2.9rem;
+    position:relative;
+}
+
+.section table.w-40 {
+    width: 45%;
+    margin-right: 0;
+}
+
+.section table.w-40:first-child {
+    margin-left: 1rem;
+}
+
+.card {
+    width: 300px
+}
+
+#table table {
+    display: inline-table;
+}
+
+#grid .row{
+    border-spacing: var(--spacing-small) 0;
+}
+
+#grid .row>.col{
+    background-color:var(--primary);
+    color:var(--bg);
+    padding:var(--spacing-small) var(--spacing-medium); 
+    font-size: .88rem;
+    text-align:center;
+}
+
+main>section:first-child{border-top:none;}

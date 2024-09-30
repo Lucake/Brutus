@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Untitled</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./brutus.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="scroll-primary">
+    <!-- partial:index.partial.html -->
+    <header class="primary fixed">
+      <b>BRUTUS</b>
+      <nav class="">
+        <a href="#">About</a>
+        <a href="#">Docs</a>
+        <a href="#">Demo</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="primary menu scroll-primary">
+        <nav class="vertical" id="sideMenu"></nav>
+      </div>
+
+      <main>
+        <section id="badge">
+          <h2 class="marker">Badge</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <span class="badge">Badge</span>
+            <span class="badge primary">Badge Primary</span>
+            <span class="badge filled">Badge Filled</span>
+            <span class="badge filled-primary">Badge Filled</span>
+            <h4>round</h4>
+            <span class="badge round">Badge</span>
+            <span class="badge primary round">Badge Primary</span>
+            <span class="badge filled round">Badge Filled</span>
+            <span class="badge filled-primary round">Badge Filled</span>
+            <h4>inline</h4>
+            <h1>
+              H1 Inline badge
+              <span class="badge filled-primary round">Badge</span>
+            </h1>
+            <h2>
+              H2 Inline badge
+              <span class="badge filled-primary round">Badge</span>
+            </h2>
+            <h3>
+              H3 Inline badge
+              <span class="badge filled-primary round">Badge</span>
+            </h3>
+            <span
+              >span Inline badge
+              <span class="badge filled-primary round">Badge</span></span
+            >
+          </div>
+        </section>
+
+        <section id="blockquote">
+          <h2 class="marker">Blockquote</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <blockquote>
+              <p>
+                Sometimes I'll start a sentence and I don't even know where it's
+                going. I just hope I find it along the way
+              </p>
+              <p><cite>– Michael Scott</cite></p>
+            </blockquote>
+            <h4>Filled</h4>
+            <blockquote class="filled-primary">
+              <p>
+                Sometimes I'll start a sentence and I don't even know where it's
+                going. I just hope I find it along the way
+              </p>
+              <p><cite>– Michael Scott</cite></p>
+            </blockquote>
+            <h4>shadow</h4>
+            <blockquote class="filled shadow-primary">
+              <p>
+                Sometimes I'll start a sentence and I don't even know where it's
+                going. I just hope I find it along the way
+              </p>
+              <p><cite>– Michael Scott</cite></p>
+            </blockquote>
+          </div>
+        </section>
+
+        <section id="buttons">
+          <h2 class="marker">Buttons</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <button>Button</button>
+            <button class="primary">Primary</button>
+            <button class="filled">Filled</button>
+            <button class="filled-primary">Filled Primary</button>
+            <button disabled="disabled">Disabled</button>
+            <h4>Round</h4>
+            <button class="round">Button</button>
+            <button class="primary round">Primary</button>
+            <button class="filled rounded-corners round">Filled</button>
+            <button class="filled-primary rounded-corners round">
+              Filled Primary
+            </button>
+            <button class="round" disabled="disabled">Disabled</button>
+            <h4>Shadow</h4>
+            <button class="shadow">Button</button>
+            <button class="primary shadow-primary">Primary</button>
+            <button class="filled shadow-primary">Filled</button>
+            <button class="filled-primary shadow">Filled Primary</button>
+            <button class="round shadow">Round</button>
+            <h4>Shadow-border</h4>
+            <button class="shadow-border">Button</button>
+            <button class="primary shadow-border-primary">Primary</button>
+            <button class="filled shadow-border">Filled</button>
+            <button class="filled-primary shadow-border-primary">
+              Filled Primary
+            </button>
+            <button class="round shadow-border">Round</button>
+          </div>
+        </section>
+
+        <section id="card">
+          <h2 class="marker">Card</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <div class="card">
+              <div class="card-content">
+                <h3>Default</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card primary">
+              <div class="card-content">
+                <h3>Primary</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card filled">
+              <div class="card-content">
+                <h3>Filled</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card filled-primary">
+              <div class="card-content">
+                <h3>Filled primary</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <h4>Round</h4>
+            <div class="card round">
+              <div class="card-content">
+                <h3>Round</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card round filled-primary">
+              <div class="card-content">
+                <h3>Round primary</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <h4>shadow</h4>
+            <div class="card shadow">
+              <div class="card-content">
+                <h3>Shadow</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card shadow-border">
+              <div class="card-content">
+                <h3>Shadow border</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <h4>media</h4>
+            <div class="card">
+              <div class="image">
+                <img src="https://i.imgur.com/b1FgyMS.jpeg" />
+              </div>
+              <div class="card-content">
+                <h3>Image card</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://i.imgur.com/b1FgyMS.jpeg" />
+              <div class="card-content">
+                <h3>Card with image</h3>
+                <p>Lorem ipsum dolor sit amet. Et tenetur enim</p>
+              </div>
+            </div>
+            >
+          </div>
+        </section>
+
+        <section id="grid">
+          <h2 class="marker">Grid</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <div class="row">
+              <div class="col 1">c1</div>
+              <div class="col 11">c11</div>
+            </div>
+            <div class="row">
+              <div class="col 2">c2</div>
+              <div class="col 10">c10</div>
+            </div>
+            <div class="row">
+              <div class="col 3">c3</div>
+              <div class="col 9">c9</div>
+            </div>
+            <div class="row">
+              <div class="col 4">c4</div>
+              <div class="col 8">c8</div>
+            </div>
+            <div class="row">
+              <div class="col 5">c5</div>
+              <div class="col 7">c7</div>
+            </div>
+            <div class="row">
+              <div class="col 6">c6</div>
+              <div class="col 6">c6</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="hr">
+          <h2 class="marker">HR</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <hr />
+            <h4>Primary</h4>
+            <hr class="primary" />
+          </div>
+        </section>
+
+        <section id="list">
+          <h2 class="marker">List</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>List and sublist</h4>
+            <ul>
+              <li>Item 1</li>
+              <li>
+                Item 2
+                <ul>
+                  <li>Subitem 1</li>
+                  <li>Subitem 2</li>
+                </ul>
+              </li>
+            </ul>
+            <h4>primary</h4>
+            <ul class="primary">
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+            <h4>Numbered list</h4>
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="marquee">
+          <h2 class="marker">Marquee</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <marquee scrollamount="10">
+              <span>Item 2</span>
+              <span>Item 3</span>
+              <span>Item 4</span>
+              <span>Item 5</span>
+            </marquee>
+          </div>
+        </section>
+
+        <section id="nav">
+          <h2 class="marker">Navigation</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>default</h4>
+            <nav>
+              <a href="#">link</a>
+              <a href="#">link</a>
+              <a href="#">link</a>
+            </nav>
+            <h4>Primary</h4>
+            <nav class="primary">
+              <a href="#">link</a>
+              <a href="#">link</a>
+              <a href="#">link</a>
+            </nav>
+            <h4>Filled</h4>
+            <nav class="filled">
+              <a href="#">link</a>
+              <a href="#">link</a>
+              <a href="#">link</a>
+            </nav>
+            <h4>Round</h4>
+            <nav class="round">
+              <a href="#">link</a>
+              <a href="#">link</a>
+              <a href="#">link</a>
+            </nav>
+            <h4>Vertical</h4>
+            <nav class="vertical">
+              <a href="#">link</a>
+              <a href="#">link</a>
+              <a href="#">link</a>
+            </nav>
+          </div>
+        </section>
+
+        <section id="progress">
+          <h2 class="marker">Progress</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <progress value="150" max="1000"></progress>
+            <h4>primary</h4>
+            <progress class="primary" value="300" max="1000"></progress>
+            <h4>round</h4>
+            <progress class="round" value="450" max="1000"></progress>
+            <h4>shadow</h4>
+            <progress class="shadow-primary" value="600" max="1000"></progress>
+            <h4>shadow border</h4>
+            <progress class="shadow-border" value="750" max="1000"></progress>
+          </div>
+        </section>
+
+        <section id="section">
+          <h2 class="marker">section</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <section>
+              <h1>Section Title</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+                tortor tempor, rhoncus tortor ut, aliquet elit. Nunc varius nisi
+                quis sapien hendrerit, eu fringilla est porttitor. Etiam posuere
+                interdum augue, sit amet rhoncus tellus porttitor at. Duis
+                ultrices risus quam, vel tincidunt lectus egestas nec.
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section id="table">
+          <h2 class="marker">Table</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h4>Default</h4>
+            <table class="w-40">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="w-40 primary">
+              <thead class="">
+                <tr>
+                  <th>Primary</th>
+                  <th>Primary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="w-40">
+              <thead class="filled">
+                <tr>
+                  <th>Filled</th>
+                  <th>Filled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="w-40">
+              <thead class="filled-primary">
+                <tr>
+                  <th>Filled Primary</th>
+                  <th>Filled Primary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Borders</h4>
+            <table class="border-row w-40">
+              <thead>
+                <tr>
+                  <th>Border Row</th>
+                  <th>Border Row</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="border-block w-40">
+              <thead>
+                <tr>
+                  <th>Border block</th>
+                  <th>Border block</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="borderless w-40">
+              <thead>
+                <tr>
+                  <th>Borderless</th>
+                  <th>Borderless</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael</td>
+                  <td>Scott</td>
+                </tr>
+                <tr>
+                  <td>Dwight</td>
+                  <td>Schrute</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="typography">
+          <h2 class="marker">Typography</h2>
+          <p>
+            veritatis voluptatem non eius eveniet ut nesciunt similique sit nisi
+            tempore vel reiciendis placeat ut alias cumque quo sapiente impedit.
+          </p>
+          <div class="section">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Paragraph</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- partial -->
+    <script src="script.js" id="end"></script>
+  </body>
+</html>

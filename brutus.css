@@ -1,0 +1,936 @@
+:root {
+    --font: "Noto Sans Mono", monospace;
+    --border-radius: 20px;
+    --border-size: 2px;
+    --shadow-distance: 9px;
+    --transition-time: .5s;
+    --global-padding: 1rem;
+
+    --bg: #f3f2f1;
+    --primary: #e55039;
+    --black: #24252b;
+
+
+    --spacing-super: 3rem;
+    --spacing-xlarge: 2rem;
+    --spacing-large: 1.5rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-xsmall: 0.25rem;
+    --spacing-tiny: 0.125rem;
+}
+
+/*  =======================================================================================
+    Resets
+    ======================================================================================= */
+/*#region Resets*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+
+textarea,
+select,
+input,
+progress {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+
+    font-family: var(--font);
+    color: var(--black);
+    font-size: 10px;
+    font-size: 100%;
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Text blocs
+    ======================================================================================== */
+/*#region Text blocs*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: normal;
+    margin: var(--spacing-small) 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: .83rem;
+}
+
+h6 {
+    font-size: .75rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-small);
+}
+
+b {
+    font-weight: 900;
+}
+
+spacer {
+    display: block;
+    height: var(--spacing-small)
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    header
+    ======================================================================================== */
+/*#region header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    font-size: 1.6rem;
+
+    width: 100%;
+    border-bottom: var(--black) var(--border-size) solid;
+    padding: 0px 20px;
+    background-color: var(--bg);
+    z-index: 999;
+}
+
+header.fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header.primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+header:has(nav) {
+    padding-right: 0
+}
+
+header>nav {
+    width: min-content;
+    border: none;
+    border-left: var(--black) var(--border-size) solid;
+}
+
+
+/*#endregion */
+
+/*  =======================================================================================
+    Nav
+    ======================================================================================== */
+/*#region NAV*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: var(--black);
+    border: var(--black) var(--border-size) solid;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+nav>* {
+    width: 100%;
+    border-right: var(--border-size) var(--black) solid;
+    transition: var(--transition-time) all ease;
+}
+
+
+nav.vertical {
+    flex-direction: column;
+}
+
+nav.vertical>* {
+    width: 100%;
+    border: none;
+    border-bottom: var(--border-size) var(--black) solid;
+    border-color: inherit;
+    color: inherit;
+    padding-block: 1.8rem;
+}
+
+nav.vertical>*:last-child {
+    border-bottom: none;
+}
+
+nav :is(a, li) {
+    padding: 10px 18px;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    color: var(--bg);
+    background-color: var(--black);
+}
+
+nav.filled a:hover {
+    color: var(--bg);
+    background-color: var(--primary);
+}
+
+nav.filled-primary a:hover {
+    background-color: var(--black);
+}
+
+.primary>nav {
+    color: inherit;
+    border-color: inherit;
+}
+
+nav.primary>*,
+.primary>nav>* {
+    color: inherit;
+    border-color: inherit
+}
+
+nav.primary>*:hover,
+.primary>nav>*:hover {
+    color: var(--bg);
+    background-color: var(--primary);
+}
+
+.filled>nav,
+.filled-primary nav {
+    color: inherit;
+    border-color: var(--bg);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Main
+    ======================================================================================= */
+/*#region Main*/
+
+main {
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    section
+    ======================================================================================= */
+/*#region section*/
+section {
+    border-block: 2px solid var(--primary);
+    padding: 1rem 1rem;
+    width: 100%;
+    max-width: 1500px;
+}
+
+section+section {
+    border-top: none;
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Links & Buttons
+    ======================================================================================== */
+/*#region Links & Buttons*/
+/*#region linds*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/*  
+    Button
+    ======================================================================================== */
+/*#region button*/
+button {
+    background-color: var(--bg);
+    color: white;
+    padding: .6rem 1.6rem;
+    font-weight: 700;
+    color: var(--black);
+    border: var(--border-size) solid var(--black);
+    margin: var(--spacing-xsmall);
+    display: inline-block;
+    cursor: pointer;
+    transition: var(--transition-time) all ease;
+}
+
+button:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+    border-color: var(--primary);
+}
+
+/*#endregion button*/
+/*
+    Button Primary
+    ======================================================================================= */
+
+button.primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+button.primary:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+    border-color: var(--primary);
+}
+
+/*
+    Button Filled
+    ======================================================================================= */
+
+
+button:disabled {
+    background-color: #ccc;
+    border: none;
+}
+
+button:disabled:hover {
+    background-color: var(--black);
+    color: var(--bg);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Lists
+    ======================================================================================= */
+/*#region Lists*/
+ol {
+    margin-left: 1.7rem;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 1.2rem;
+    margin-bottom: 1.2rem
+}
+
+ul ::marker {
+    font-size: 1rem
+}
+
+ul ul {
+    margin-left: 1.2rem;
+}
+
+ul li {
+    margin-block: .5rem;
+}
+
+ul.primary ::marker,
+ol.primary ::marker {
+    color: var(--primary)
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Blockquote
+    ======================================================================================= */
+/*#region Blokquote*/
+blockquote {
+    border-left: 12px solid var(--primary);
+    padding: var(--spacing-xlarge) var(--spacing-large);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xlarge);
+    transition: all var(--transition-time) ease;
+}
+
+blockquote p:has(cite) {
+    font-size: 1rem;
+    margin-top: var(--spacing-medium);
+    padding-bottom: 0;
+}
+
+blockquote.filled {
+    border-left-color: var(--primary);
+}
+
+blockquote.filled.shadow:before {
+    background-color: var(--black);
+    border-color: var(--black);
+}
+
+blockquote.filled-primary {
+    border-left-color: var(--black);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    progress
+    ======================================================================================= */
+/*#region progress*/
+
+progress {
+    display: block;
+    width: 100%;
+    appearance: none;
+    height: 2.3rem;
+    --progress-fore-color: var(--bg);
+    background: var(--bg);
+    color: var(--primary);
+    border: var(--border-size) solid var(--black);
+    transition: var(--transition-time) all ease;
+    margin-bottom: var(--spacing-medium)
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--bg);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--black);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--black);
+}
+
+progress.primary {
+    border-color: var(--primary);
+}
+
+progress.primary::-webkit-progress-value {
+    background-color: var(--primary);
+}
+
+/*#endregion */
+/*#endregion */
+
+/*  =======================================================================================
+    Card
+    ======================================================================================= */
+/*#region card*/
+
+.card {
+    border: var(--border-size) solid var(--black);
+    display: inline-block;
+    margin: var(--spacing-small) var(--spacing-tiny);
+    background-color: var(--bg);
+    color: var(--black);
+}
+
+.card img,
+.card video,
+.card iframe {
+    width: 100%;
+}
+
+.card .image {
+    width: 100%;
+    max-height: 60%;
+}
+
+.card .image img {
+    object-fit: cover;
+}
+
+.card-content {
+    padding: var(--spacing-large) var(--spacing-large);
+    padding-top: var(--spacing-small);
+}
+
+.card:has(.image),
+.card:has(.card-content) {
+    padding: 0;
+}
+
+.card-content *:first-child {
+    padding-top: 0;
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Table
+    ======================================================================================= */
+/*#region table*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    inline-size: 100%;
+}
+
+thead {
+    font-weight: 900;
+}
+
+td,
+th {
+    border: var(--border-size) solid var(--black);
+    padding: var(--global-padding);
+}
+
+table.primary :is(td, th, tr) {
+    border-color: var(--primary);
+}
+
+table.border-row {
+    border: 0;
+    border-inline: var(--border-size) solid var(--black);
+}
+
+table.border-row :is(td,
+    th) {
+    border: 0;
+    border-block: var(--border-size) solid var(--black);
+}
+
+table.border-block {
+    border: 0;
+    border-block: var(--border-size) solid var(--black);
+}
+
+table.border-block :is(td,
+    th) {
+    border: 0;
+    border-block: var(--border-size) solid var(--black);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Marquee
+    ======================================================================================= */
+/*#region Marquee*/
+marquee {
+    border: var(--border-size) solid var(--black);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: var(--spacing-small);
+}
+
+marquee>* {
+    margin-left: var(--spacing-xlarge);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Hr
+    ======================================================================================= */
+/*#region hr*/
+hr {
+    border: none;
+    border-bottom: var(--border-size) solid var(--black);
+    width: 100%;
+    margin-bottom: var(--spacing-xlarge);
+}
+
+
+/*#endregion */
+
+/*  =======================================================================================
+    Badge
+    ======================================================================================= */
+/*#region badge*/
+.badge {
+    color: var(--black);
+    border: var(--border-size) solid var(--black);
+    padding: 0 var(--spacing-small);
+    line-height: var(--spacing-xlarge);
+    white-space: nowrap;
+    font-size: 75%;
+    font-weight: 700;
+}
+
+.badge.round {
+    padding: 0 var(--spacing-medium);
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Grid
+    ======================================================================================= */
+/*#region grid*/
+.row {
+    width: 100%;
+    display: table;
+    border-spacing: var(--spacing-medium) 0;
+    margin-bottom: var(--spacing-small);
+}
+
+.col {
+    display: table-cell;
+    margin-bottom: var(--spacing-medium);
+}
+
+
+
+.\31 {
+    width: 5%
+}
+
+.\32 {
+    width: 15%
+}
+
+.\33 {
+    width: 22%
+}
+
+.\34 {
+    width: 30%
+}
+
+.\35 {
+    width: 40%
+}
+
+.\36 {
+    width: 50%
+}
+
+@media(max-width: 35em) {
+    .row {
+        margin-bottom: 0;
+    }
+
+    .col {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    Utils
+    ======================================================================================== */
+/*#region utils*/
+/*
+    # Marker
+    ======================================================================================== */
+/*#region Marker*/
+.marker:before {
+    content: "#";
+    color: var(--primary);
+    font-weight: 700;
+    margin-right: var(--spacing-xsmall);
+}
+
+/*#endregion */
+/*
+    Round border
+    ======================================================================================= */
+/*#region Round border*/
+.round {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/*#endregion */
+/*
+    Shadow
+    ======================================================================================= */
+/*#region Shadow*/
+
+[class*='shadow'],
+.shadow-primary {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--transition-time) all ease
+}
+
+[class*='shadow']:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--black);
+    top: var(--shadow-distance);
+    left: var(--shadow-distance);
+    border: var(--border-size) solid var(--black);
+    z-index: -1;
+    transition: var(--transition-time) all ease;
+    transform: translateZ(-1em);
+}
+
+[class*='shadow'].round.round:before {
+    border-radius: var(--border-radius)
+}
+
+[class*='shadow'].round {
+    overflow: visible;
+}
+
+.shadow-primary:before {
+    background-color: var(--primary);
+    border: var(--border-size) solid var(--primary);
+}
+
+[class*='shadow']:hover {
+    --half-shadow-distance: calc(var(--shadow-distance)/2);
+    transform: translate(var(--half-shadow-distance), var(--half-shadow-distance));
+}
+
+[class*='shadow']:hover:before {
+    top: 0;
+    left: 0;
+}
+
+
+
+/*
+    Shadow border
+    ======================================================================================= */
+/*#region Shadow border*/
+
+[class*='shadow-border']:before {
+    background-color: transparent;
+}
+
+.shadow-border-primary:before {
+    border-color: var(--primary)
+}
+
+/*#endregion */
+
+/*#endregion shadow*/
+
+/*
+    Primary
+    ======================================================================================= */
+/*#region primary*/
+.primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/*#endregion */
+
+/*  
+    Borderless
+    ======================================================================================= */
+/*#region borderless*/
+.borderless {
+    border: none;
+}
+
+table.borderless :is(td, th) {
+    border: none;
+}
+
+/*#endregion */
+/*
+    Filled
+    ======================================================================================= */
+/*#region filled*/
+[class*='filled'] {
+    color: var(--bg);
+    border-color: var(--black);
+    background-color: var(--black)
+}
+
+[class*='filled'] a,
+[class*='filled']>nav a {
+    color: inherit;
+    border-color: inherit
+}
+
+button.filled:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+    border-color: var(--primary);
+}
+
+.filled-primary {
+    border-color: var(--primary);
+    background-color: var(--primary)
+}
+
+.filled-primary a {
+    color: var(--bg);
+    border-color: var(--bg)
+}
+
+.filled-primary:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+}
+
+/*#endregion */
+
+/*
+    text align
+    ======================================================================================= */
+/*#region text-align*/
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/*#endregion */
+
+/*
+    Width
+    ======================================================================================= */
+/*#region width*/
+
+.w-100,
+.w-full {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/*#endregion */
+
+/*  =======================================================================================
+    border
+    ======================================================================================= */
+/*#region border*/
+[class*='border'] {
+    border: var(--border-size) var(--black) solid;
+}
+
+/*#endregion border*/
+
+/*#endregion utils*/
+
+
+
+
+
+/*  =======================================================================================
+    Scrollbar
+    ======================================================================================= */
+/*#region scroll*/
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #750000 #EBEBEB;
+}*/
+
+/* Chrome, Edge and Safari */
+[class*='scroll']::-webkit-scrollbar {
+    height: 19px;
+    width: 1.2rem;
+    border-radius: 0px;
+    transition: .5s all ease;
+    transition: var(--transition-time) all ease;
+    margin-top: -3px
+}
+
+[class*='scroll']::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: transparent;
+    border-inline: var(--border-size) solid var(--black);
+    border-color: inherit;
+}
+
+[class*='scroll']::-webkit-scrollbar-track:hover {
+    background-color: var(--bg);
+    transition: var(--transition-time) all ease;
+}
+
+[class*='scroll']::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+    border: var(--border-size) solid var(--black);
+    border: none;
+}
+
+[class*='scroll']::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+}
+
+/*
+    scroll primary
+    ======================================================================================= */
+
+
+.scroll-primary::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.scroll-primary::-webkit-scrollbar-track {
+    border-color: var(--primary);
+}
+
+[class*='scroll']::-webkit-scrollbar-thumb:hover {
+    background-color: var(--black);
+}
+
+
+
+.section {
+    padding: 2rem 2rem;
+}
