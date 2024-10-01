@@ -162,7 +162,10 @@ header>nav {
     border-left: var(--black) var(--border-size) solid;
 }
 
-
+header>nav *{
+    
+    padding: 12px 18px;
+}
 /*#endregion */
 
 /*  =======================================================================================
@@ -184,6 +187,7 @@ nav>* {
     width: 100%;
     border-right: var(--border-size) var(--black) solid;
     transition: var(--transition-time) all ease;
+    height:100%;
 }
 
 
@@ -205,7 +209,7 @@ nav.vertical>*:last-child {
 }
 
 nav :is(a, li) {
-    padding: 10px 18px;
+    padding: 12px 18px;
 }
 
 nav a:last-child {
