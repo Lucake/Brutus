@@ -289,7 +289,7 @@ section+section {
     Links & Buttons
     ======================================================================================== */
 /*#region Links & Buttons*/
-/*#region linds*/
+/*#region links*/
 a {
     text-decoration: none;
     color: inherit;
@@ -298,6 +298,7 @@ a {
 a:visited {
     color: inherit;
 }
+/*#endregion links*/
 
 /*  
     Button
@@ -665,6 +666,61 @@ hr {
 }
 
 /*#endregion */
+
+/*  =======================================================================================
+    Dropdown
+    ======================================================================================= */
+/*#region Dropdown*/
+details {
+    color: var(--black);
+}
+
+details {
+    color: var(--black);
+}
+
+details>summary{
+    padding: var(--spacing-medium) var(--spacing-large);
+    border: var(--border-size) solid var(--black);
+    font-weight: 700;
+    transition: var(--transition-time) all ease;
+    color:inherit;
+    border-color:inherit;
+    cursor:pointer;
+}
+
+details > summary {
+    list-style-type: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary:after{
+    content:'▶';
+    float:right;
+    font-size:1rem;
+    transition: var(--transition-time) all ease;
+}
+
+details[open] > summary:after{
+    transform: rotate(90deg);
+}
+
+details > .content{
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+summary:hover {
+    background-color:var(--primary);
+    color:var(--bg);
+}
+
+/*#endregion */
+
+
+
 
 /*  =======================================================================================
     Utils
