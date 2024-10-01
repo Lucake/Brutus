@@ -668,9 +668,9 @@ hr {
 /*#endregion */
 
 /*  =======================================================================================
-    Dropdown
+    Accordion 
     ======================================================================================= */
-/*#region Dropdown*/
+/*#region Accordion */
 details {
     color: var(--black);
 }
@@ -708,8 +708,11 @@ details[open] > summary:after{
     transform: rotate(90deg);
 }
 
-details > .content{
+details > *{
     padding: var(--spacing-medium) var(--spacing-large);
+    border: var(--border-size) solid var(--black);
+    border-top:none;
+    border-color:inherit;
 }
 
 summary:hover {
