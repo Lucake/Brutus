@@ -1,32 +1,25 @@
-.menu {
+.content {
+    display: flex;
+    position:relative;
+    height:calc(100vh - 3rem);
+    overflow-y: hidden;
+}
+
+#sideMenu {
     --width: 40%;
-    --max-width: 450px;
+    --max-width: 350px;
     width: var(--width);
     max-width: var(--max-width);
     height: 100%;
     overflow-y: scroll;
-    border-color: inherit;
-    position: sticky;
-    top: 3.08rem;
-    left: 0;
-}
-
-#sideMenu {
     width: 100%;
     border: 0;
-    border-bottom:2px solid;
     height:100%;
 }
 
 main {
     width: -webkit-fill-available;
-}
-
-.content {
-    display: flex;
-    padding-top:2.9rem;
-    margin-top:-2.9rem;
-    position:relative;
+    overflow-y:scroll
 }
 
 .section table.w-40 {
