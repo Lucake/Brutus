@@ -28,6 +28,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -861,7 +862,7 @@ button.filled:hover {
     border
     ======================================================================================= */
 /*#region border*/
-[class*='border'] {
+[class*='bordered'] {
     border: var(--border-size) var(--black) solid;
 }
 
