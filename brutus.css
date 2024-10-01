@@ -668,9 +668,9 @@ hr {
 /*#endregion */
 
 /*  =======================================================================================
-    Dropdown
+    Accordion 
     ======================================================================================= */
-/*#region Dropdown*/
+/*#region Accordion */
 details {
     color: var(--black);
 }
@@ -682,6 +682,7 @@ details {
 details>summary{
     padding: var(--spacing-medium) var(--spacing-large);
     border: var(--border-size) solid var(--black);
+    border-colod:var(--primary);
     font-weight: 700;
     transition: var(--transition-time) all ease;
     color:inherit;
@@ -708,12 +709,16 @@ details[open] > summary:after{
     transform: rotate(90deg);
 }
 
-details > .content{
+details > *{
     padding: var(--spacing-medium) var(--spacing-large);
+    border: var(--border-size) solid var(--black);
+    border-top:none;
+    border-color:inherit;
 }
 
 summary:hover {
     background-color:var(--primary);
+    border-color:var(--primary);
     color:var(--bg);
 }
 
