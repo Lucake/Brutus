@@ -263,7 +263,7 @@ nav.primary>*:hover,
 
 main {
     margin: 0 auto;
-    max-width: 900px;
+    padding:2rem 4rem;
 }
 
 /*#endregion */
@@ -274,9 +274,9 @@ main {
 /*#region section*/
 section {
     border-block: 2px solid var(--primary);
-    padding: 1rem 1rem;
+    padding: 1rem 3rem;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px;
 }
 
 section+section {

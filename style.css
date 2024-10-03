@@ -18,8 +18,13 @@
 }
 
 main {
-    width: -webkit-fill-available;
-    overflow-y: scroll
+    width: 100%;
+    overflow-y: scroll;
+    padding-top:2rem;
+}
+
+main .component{
+    margin:0 auto;
 }
 
 .section table.w-40 {

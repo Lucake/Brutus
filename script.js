@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 const generateNav = () => {
     navItems = [];
-    [...document.querySelectorAll('section')].forEach((e)=>{
+    [...document.querySelectorAll('.component')].forEach((e)=>{
         data = {
             id:e.id,
             value:e.querySelector('h2').innerHTML
         }
+        console.log(data.id)
         navItems.push(data)
         newElement = document.createElement('a');
         newElement.href = "#"+data.id
